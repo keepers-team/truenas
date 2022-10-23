@@ -1,0 +1,30 @@
+apiVersion: v2
+kubeVersion: ">=1.16.0-0"
+name: webtlo
+version: 1.0.2
+appVersion: 2.9.9
+description: torrent management for keepers.
+type: application
+deprecated: false
+home: https://github.com/keepers-team/truenas/tree/main/stable/webtlo
+icon: https://keepers.tech/favicon.png
+keywords:
+  - torrent
+  - keepers
+sources:
+  - https://github.com/keepers-team/truenas/tree/main/stable/webtlo
+  - https://github.com/keepers-team/webtlo
+  - https://hub.docker.com/r/berkut174/webtlo
+dependencies:
+  - name: common
+    repository: https://library-charts.truecharts.org
+    version: 10.6.11
+maintainers:
+  - email: me@orhideous.name
+    name: Orhideous
+    url: https://orhideous.name
+annotations:
+  truecharts.org/catagories: |
+    - download-tools
+  truecharts.org/SCALE-support: "true"
+  truecharts.org/grade: U
