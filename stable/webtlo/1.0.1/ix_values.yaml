@@ -1,0 +1,32 @@
+image:
+  repository: berkut174/webtlo
+  pullPolicy: IfNotPresent
+  tag: sha-6791a4a
+
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
+
+podSecurityContext:
+  runAsUser: 0
+  runAsGroup: 0
+  fsGroup: 65534
+
+service:
+  main:
+    ports:
+      main:
+        port: 18088
+        targetPort: 80
+
+env:
+  WEBTLO_DIR: /config
+  WEBTLO_CRON: false
+
+persistence:
+  config:
+    enabled: true
+    mountPath: "/config"
+
+portal:
+  enabled: true
